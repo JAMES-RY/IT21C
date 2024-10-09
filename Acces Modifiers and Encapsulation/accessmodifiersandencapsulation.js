@@ -1,22 +1,27 @@
-const person1 ={
-    name:"James Rymer",
-    age:20,
-    occupation:"hehe"
-}
+class Person{
 
-//Process and Output
-console.log("Name: "+person1.name);
-console.log("Age: "+person1.age);
-console.log("Occupation: "+person1.occupation);
-console.log("--------------------------------");
+    //Private Fields
+    #name;
+    #age;
+    #occupation;
 
+    constructor(name, age, occupation){
+        this.#name = name;
+        this.#age = age;
+        this.#occupation = occupation;
+    }
 
-// Class definition
-class Person {
-    constructor(name, age, occupation) {
-        this.name = name;
-        this.age = age;
-        this.occupation = occupation;
+    //Getters
+    get name(){
+        return this.#name;
+    }
+
+    get age(){
+        return this.#age;
+    }
+
+    get occupation(){
+        return this.#occupation;
     }
 
     // Method to display person information in the console
@@ -37,8 +42,9 @@ class Person {
     }
 }
 
+
 // Creating an object (instance) of the Person class
-const personOne = new Person('Cliff', 23, 'Instructor');
+const personOne = new Person('Rymer', 20, 'Student');
 
 // Calling methods
-personOne.displayInfo();       
+personOne.displayInfo();  
